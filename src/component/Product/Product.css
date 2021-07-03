@@ -1,0 +1,26 @@
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  height: 100px;
+
+  margin-bottom: 25px;
+}
+.content{
+
+}
+image img{
+  height: 100px;
+  /* box-shadow: 1px solid gray; */
+}
+
+.extra img{
+  border-radius: 50%;
+}
+
+
+.item span{
+  color:slategrey
+}
