@@ -5,12 +5,11 @@
   justify-content: center;
 
   height: 100px;
-
-  margin-bottom: 25px;
+  margin: 30px 0px;
 }
-.content{
+/* .content{
 
-}
+} */
 image img{
   height: 100px;
   /* box-shadow: 1px solid gray; */
