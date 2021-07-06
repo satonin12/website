@@ -1,5 +1,5 @@
 import React from 'react'
-import Product from './Product/Product'
+import Product from '../component/Product/Product'
 
 import Seed from '../Seed.js'
 
