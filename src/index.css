@@ -27,3 +27,10 @@ hr{
   justify-content: center;
   margin-top: 10px;
 }
+
+.wrapper_timer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10px;
+}

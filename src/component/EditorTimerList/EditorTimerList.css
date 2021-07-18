@@ -1,0 +1,7 @@
+.timers_wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin: auto;
+}
