@@ -7,10 +7,13 @@ import {
   BrowserRouter as Router,
 } from 'react-router-dom'
 
-import './index.css'
+import './index.scss'
+import 'macro-css'
 
-import Home from './pages/Home.js'
+import {Home} from './pages/Home.js'
 import ProductList from './pages/ProductList.js'
+import Blast from './pages/Blast.js'
+import Pug from './pages/Pug.js'
 import TimersDashboard from './pages/TimersDashboard.js'
 
 ReactDOM.render(
@@ -21,12 +24,23 @@ ReactDOM.render(
         <Route path="/home" exact>
           <Home />
         </Route>
+
         <Route path="/product_list" exact>
           <ProductList />
         </Route>
+
         <Route path="/timers" exact>
           <TimersDashboard />
         </Route>
+
+        <Route path="/blast" exact>
+          <Blast />
+        </Route>
+
+        <Route path="/pug" exact>
+          <Pug />
+        </Route>
+
         <Redirect to="/home" />
       </Switch>
     </Router>
