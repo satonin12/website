@@ -15,6 +15,7 @@ import ProductList from './pages/ProductList.js'
 import Blast from './pages/Blast.js'
 import Pug from './pages/Pug.js'
 import TimersDashboard from './pages/TimersDashboard.js'
+import {Projects} from './pages/Projects/Projects'
 
 ReactDOM.render(
   <>
@@ -27,6 +28,10 @@ ReactDOM.render(
 
         <Route path="/product_list" exact>
           <ProductList />
+        </Route>
+
+        <Route path="/project" exact>
+          <Projects />
         </Route>
 
         <Route path="/timers" exact>
