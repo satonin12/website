@@ -6,6 +6,8 @@ import Menu from '../../assets/menu.svg'
 import Moon from '../../assets/moon.svg'
 import Sun from '../../assets/sun.svg'
 
+import './index.scss'
+
 export const Header = (props) => {
   return (
     <header className="d-flex justify-between align-center">
