@@ -1,4 +1,4 @@
-import React, { useState, Suspense, lazy } from 'react'
+import React, { useState, Suspense, lazy, useEffect } from 'react'
 import { Document, Page, pdfjs } from 'react-pdf'
 import { BaseLayout } from '../../lauouts/BaseLayout/BaseLayout'
 import Lottie from 'lottie-react'
@@ -113,21 +113,18 @@ export const Resume = (props) => {
             </a>
             <div className={scss.PdfWrapper}>
               <div className={scss.skills}>
-                <Suspense fallback={Loading}>
+                <Suspense fallback={<Loading />}>
                   {(numPages && (
                     <>
                       <h3>Мои скиллы</h3>
                       <SkillBars skills={skillsData} flat={false} />
                     </>
-                  )) ||
-                    <Loading />
-                  }
+                  )) || <Loading />}
                 </Suspense>
               </div>
               <Document
                 file="/portfolio.pdf"
                 onLoadSuccess={onDocumentLoadSuccess}
-                loading={Loading}
               >
                 <Page pageNumber={pageNumber} />
               </Document>
