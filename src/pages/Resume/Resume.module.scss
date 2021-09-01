@@ -8,6 +8,9 @@
 
 .PdfWrapper {
   width: auto;
+  width: -moz-available;          /* WebKit игнор. */
+  width: -webkit-fill-available;  /* Mozilla игнор. */
+
   //padding: 1rem 0;
   margin-top: 40px;
 
@@ -35,7 +38,19 @@
   }
 }
 
+.NyanCat {
+  width: 100%;
+  width: -moz-available;          /* WebKit игнор. */
+  width: -webkit-fill-available;  /* Mozilla игнор. */
+  height: 70px;
+}
 
+.NyanCat_Canvas {
+  height: inherit !important;
+}
+.tsParticles {
+  height: inherit !important;
+}
 
 .ResumeHeaderBlock {
   display: flex;

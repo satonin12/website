@@ -1,6 +1,5 @@
-import React, { useEffect, useState, Suspense, lazy } from 'react'
+import React, { useState, Suspense, lazy } from 'react'
 import { Document, Page, pdfjs } from 'react-pdf'
-import Portfolio from '../../assets/portfolio.pdf'
 import { BaseLayout } from '../../lauouts/BaseLayout/BaseLayout'
 import Lottie from 'lottie-react'
 
@@ -13,10 +12,17 @@ import AmongUsParticlesJson from '../../assets/particles_among_us.json'
 import NyanCatJson from '../../assets/particles_nyan_cat.json'
 import { MyParticles } from '../../component/Particles/Particles'
 import ResumeLottie from '../../assets/resume.json'
-import classnames from 'classnames'
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`
 
+const Loading = () => {
+  return (
+    <div className={scss.NyanCat}>
+      <MyParticles name="NyanCatJson" json={NyanCatJson} />
+      {/*Hello World!!*/}
+    </div>
+  )
+}
 
 export const Resume = (props) => {
   const [numPages, setNumPages] = useState(null)
@@ -107,19 +113,21 @@ export const Resume = (props) => {
             </a>
             <div className={scss.PdfWrapper}>
               <div className={scss.skills}>
-                <Suspense fallback={<div>Загрузка...</div>}>
+                <Suspense fallback={Loading}>
                   {(numPages && (
                     <>
                       <h3>Мои скиллы</h3>
                       <SkillBars skills={skillsData} flat={false} />
                     </>
                   )) ||
-                    'Loading...'}
+                    <Loading />
+                  }
                 </Suspense>
               </div>
               <Document
                 file="/portfolio.pdf"
                 onLoadSuccess={onDocumentLoadSuccess}
+                loading={Loading}
               >
                 <Page pageNumber={pageNumber} />
               </Document>
