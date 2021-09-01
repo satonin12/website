@@ -10,12 +10,14 @@ import {
 import './index.scss'
 import 'macro-css'
 
-import {Home} from './pages/Home.js'
+import { Home } from './pages/Home.js'
 import ProductList from './pages/ProductList.js'
 import Blast from './pages/Blast.js'
 import Pug from './pages/Pug.js'
 import TimersDashboard from './pages/TimersDashboard.js'
-import {Projects} from './pages/Projects/Projects'
+import { Projects } from './pages/Projects/Projects'
+import { About } from './pages/About/About'
+import { Resume } from './pages/Resume/Resume'
 
 ReactDOM.render(
   <>
@@ -24,6 +26,14 @@ ReactDOM.render(
       <Switch>
         <Route path="/home" exact>
           <Home />
+        </Route>
+
+        <Route path="/about" exact>
+          <About />
+        </Route>
+
+        <Route path="/resume" exact>
+          <Resume />
         </Route>
 
         <Route path="/product_list" exact>

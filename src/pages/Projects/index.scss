@@ -1,4 +1,51 @@
+.wrapperChronoCard {
+  .hiddenChronoCard {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    //visibility: hidden;
+
+    animation-duration: 0s;
+    opacity: 0;
+
+    margin-right: 8px;
+    margin-bottom: 12px;
+    padding: 8px;
+
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    border: 2px solid #FAB9D2;
+    border-radius: 6px;
+
+    // ! hover
+    //visibility: visible;
+    //height: 100%;
+    //width: 450px;
+    //
+    //animation-duration: .5s;
+    //transition: all .5s;
+    //opacity: 100;
+    //transform: translateX(95%);
+  }
+
+  &__active {
+    .hiddenChronoCard {
+      visibility: visible;
+      height: 100%;
+      width: 450px;
+
+      animation-duration: .5s;
+      transition: all .5s;
+      opacity: 100;
+      transform: translateX(95%);
+    }
+  }
+}
+
 .chrono {
+  position: relative;
+
   header {
     padding: 0;
   }
@@ -18,6 +65,8 @@
 }
 
 .cardChrono {
+  // border: 1px solid #F78CB6;
+
   &--image {
     width: 100%;
     width: -moz-available; /* For Mozzila */
@@ -47,4 +96,49 @@
   &:hover {
     // border: 1px solid blue;
   }
+}
+
+.hiddenChronoCard--Stack {
+  span {
+    border: 1px solid #FAB9D2; //6c5ce7;
+    border-radius: 6px;
+    width: -moz-fit-content;
+    margin-left: 5px;
+    padding: 0px 5px;
+    font-size: 13px;
+
+    margin: 3px 5px;
+  }
+}
+
+.Links--item {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+
+  margin: 0;
+  padding: 0;
+
+  cursor: pointer;
+  text-decoration: none;
+
+  background: #fff;
+  box-shadow: 0px 0px 0px 2px #FAB9D2; //7d4cdb;
+  //border: 2px solid #FAB9D2; //7d4cdb;
+  border-radius: 18px;
+  color: #444444;
+  padding: 4px 20px;
+  font-size: 15px;
+  line-height: 18px;
+
+  transition-property: color, background-color, border-color, box-shadow;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+
+.chrono section:focus-visible {
+  //outline: 2px solid #950dff !important;
+  outline-color: #FAB9D2 !important;
 }

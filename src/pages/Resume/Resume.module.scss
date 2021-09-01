@@ -1,0 +1,55 @@
+.resumeWrapper {
+  margin: 0;
+  padding: 0;
+  a{
+    cursor: pointer;
+  }
+}
+
+.PdfWrapper {
+  width: auto;
+  //padding: 1rem 0;
+  margin-top: 40px;
+
+  display: flex;
+  flex-direction: row;
+
+  border: 1px solid #F78CB6;
+
+}
+.skills {
+  width: 300px;
+  height: inherit;
+
+  background: #F78CB6;
+  color: #fff;
+
+  h3 {
+    text-align: center;
+    color: #fff;
+    font-family: Circular Std;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 40px;
+  }
+}
+
+
+
+.ResumeHeaderBlock {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+
+  h1 {
+    font-family: Circular Std;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 40px;
+    color: #f78cb6;
+  }
+}

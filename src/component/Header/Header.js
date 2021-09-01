@@ -20,25 +20,25 @@ export const Header = (props) => {
       <ul className="d-flex">
         <li className="mr-30">
           <span>
-            <a href={'product_list'}>Home</a>
+            <a href={'/home'}>Home</a>
           </span>
         </li>
 
         <li className="mr-30">
           <span>
-            <a href={'timers'}>About</a>
+            <a href={'/about'}>About</a>
           </span>
         </li>
 
         <li className="mr-30">
           <span>
-            <a href={'project'}>Projects</a>
+            <a href={'/project'}>Projects</a>
           </span>
         </li>
 
         <li className="mr-30">
           <span>
-            <a href={'pug'}>Resume</a>
+            <a href={'/resume'}>Resume</a>
           </span>
         </li>
 
