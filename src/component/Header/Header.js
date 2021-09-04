@@ -24,11 +24,12 @@ export const Header = (props) => {
           </span>
         </li>
 
-        <li className="mr-30">
-          <span>
-            <a href={'/about'}>About</a>
-          </span>
-        </li>
+        {/*TODO: появится чуть позже*/}
+        {/*<li className="mr-30">*/}
+        {/*  <span>*/}
+        {/*    <a href={'/about'}>About</a>*/}
+        {/*  </span>*/}
+        {/*</li>*/}
 
         <li className="mr-30">
           <span>

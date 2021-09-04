@@ -6,7 +6,6 @@ import Lottie from 'lottie-react'
 import scss from './Resume.module.scss'
 import './SkillBars.scss'
 import Button from '../../component/Button/Button'
-
 // ! assets
 import AmongUsParticlesJson from '../../assets/particles_among_us.json'
 import NyanCatJson from '../../assets/particles_nyan_cat.json'
@@ -114,7 +113,7 @@ export const Resume = (props) => {
             <div className={scss.PdfWrapper}>
               <div className={scss.skills}>
                 <Suspense fallback={<Loading />}>
-                  {(numPages && (
+                  {(numPages && SkillBars && (
                     <>
                       <h3>Мои скиллы</h3>
                       <SkillBars skills={skillsData} flat={false} />
