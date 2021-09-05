@@ -11,9 +11,9 @@
       "dest":"app.js"
     }
   ],
-  "rewrites": [
+  "routes": [
     {
-      "source": "/(.*)", "destination": "/"
+      "src": "/[^.]+", "dest": "/", "status": 200
     }
   ]
 }
