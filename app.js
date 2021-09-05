@@ -9,7 +9,7 @@ const cors = require('cors')
 const { JWT_SECRET, MONGOURI } = require('./config/keys')
 const path = require('path')
 
-const PORT = config.get('port') || 5000
+const PORT = 5000
 
 // server
 const app = express()
