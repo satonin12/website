@@ -6,7 +6,7 @@ const { check, validationResult } = require('express-validator')
 const User = require('../models/User')
 const router = Router()
 
-const { JWT_SECRET, MONGOURI } = require('./config/keys')
+const { JWT_SECRET, MONGOURI } = require('../config/keys')
 
 // /api/auth/create
 router.post('/create', async (req, res) => {
