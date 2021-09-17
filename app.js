@@ -20,15 +20,15 @@ app.use('/api/auth', require('./routes/auth.routes'))
 const server = _http.createServer(app)
 
 if (process.env.NODE_ENV == 'production') {
-  const path = require('path')
+  app.use(express.static(path.resolve(__dirname, 'client', 'build')))
 
-  app.get('/*', (req, res) => {
-    // app.use(express.static(path.resolve(__dirname, 'client', 'build')))
-    // res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
-
-    app.use(express.static('/client/build'))
+  app.get('*', (req, res) => {
+    console.log('зашли в путь /*')
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
   })
 }
+
+
 
 server.listen(PORT, () =>
   console.log(`App has been started on port ${PORT}...`)
